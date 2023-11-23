@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --nav-height: 50px;
+}
+
+@font-face {
+    font-family: 'SFProDisplay';
+    src: url('fonts/SF-Pro-Rounded/SF-Pro-Rounded-Bold.otf') format('otf');
+    font-weight: bold;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: 'SFProText';
+    src: url('fonts/SF-Pro-Text/SF-Pro-Text-Regular.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Nav */
+.nav__links {
+    /* TODO: Animation */
+}
+
+.mobile-nav__links {
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    .nav__links {
+        display: none;
+    }
+    .mobile-nav__links {
+        display: flex;
+    }
+}
+
+/* Home: Banner */
+
+/* position: relative;
+max-width: 2560px;
+margin: 0 auto;
+padding-top: var(--global-nav-collective-height); */

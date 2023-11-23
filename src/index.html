@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hampton Lab</title>
+    <link rel="stylesheet" href="/dist/output.css">
+    <!-- Alpine Plugins -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+    <!-- Alpine Core -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.2/dist/cdn.min.js"></script>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+</head>
+
+<body x-data="{ open: false }">
+    <header class="fixed top-0 left-0 right-0 max-h-16 h-16 z-50 overflow-hidden">
+        <div
+            class="flex flex-row justify-between items-center h-full max-w-5xl my-0 mx-auto py-2 px-10 rounded-xl bg-hampton-white-1">
+            <div class="flex flex-row h-full max-h-full cursor-pointer">
+                <img src="assets/img/logo.png" alt="Hampton" class="h-full py-1">
+                <img src="assets/img/logo-full-2.png" alt="" class="h-full py-1">
+            </div>
+
+            <!-- TODO: Animate -->
+            <nav class="hidden md:block">
+                <ul class="list-none flex flex-row items-center justify-center h-full gap-x-4 p-0">
+                    <li class="font-medium transition-all hover:text-hampton-blue-1"><a href="index.html">Home</a></li>
+                    <li class="font-medium transition-all hover:text-hampton-blue-1"><a href="work.html">Work</a></li>
+                    <li class="font-medium transition-all hover:text-hampton-blue-1"><a href="about.html">About</a></li>
+                    <li class="font-medium transition-all hover:text-hampton-blue-1"><a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="flex md:hidden">
+                <button type="button"
+                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                    x-on:click="open = ! open">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+
+        <!-- FIXME: Make sure this is always covering the entire screen -->
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div class="md:hidden" role="dialog" aria-modal="true" x-show="open">
+            <!-- Background backdrop, show/hide based on slide-over state. -->
+            <div class="fixed inset-0 z-50"></div>
+            <div
+                class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <div class="flex items-center justify-between">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Your Company</span>
+                        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                            alt="">
+                    </a>
+                    <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" x-on:click="open = ! open">
+                        <span class="sr-only">Close menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-6 flow-root">
+                    <div class="-my-6 divide-y divide-gray-500/10">
+                        <div class="space-y-2 py-6">
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-black hover:bg-gray-50">Home</a>
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-black hover:bg-gray-50">Work</a>
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-black hover:bg-gray-50">About</a>
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-black hover:bg-gray-50">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </header>
+
+    <main class="max-w-screen-2xl pt-14">
+        <!-- Banner -->
+        <section>
+            <div class="relative isolate px-6 pt-14 lg:px-8">
+
+                <!-- Gradient BG -->
+                <!-- <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+                    aria-hidden="true">
+                    <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-hampton-blue-1 via-hampton-blue-2 to-hampton-blue-3 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+                        style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+                    </div>
+                </div> -->
+
+                <!-- <div class="absolute top-0 right-0 left-0 h-full flex items-center justify-center z-0">
+                    <img src="assets/img/safari-browser.png" alt="" class="h-full">
+                </div> -->
+
+                <!-- Banner Text -->
+                <div class="relative mx-auto max-w-2xl py-20 z-10">
+                    <div class="text-center">
+                        <h1 class="text-4xl font-medium tracking-tight text-black sm:text-6xl">We make and manage
+                            websites.</h1>
+                        <p class="mt-6 text-lg leading-8 text-gray-600">A web development agency.</p>
+
+                        <!-- CTA -->
+                        <div class="mt-10 flex items-center justify-center gap-x-6">
+                            <a href="#"
+                                class="rounded-md bg-gradient-to-b from-hampton-blue-1 via-hampton-blue-2 to-hampton-blue-3 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:ring-2 hover:ring-hampton-blue-2 transition-all cursor-pointer">I
+                                want to work with you</a>
+                            <a href="#"
+                                class="text-sm font-semibold leading-6 text-black hover:text-hampton-blue-1">Learn more
+                                <span aria-hidden="true">→</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gradient BG 2 -->
+                <!-- <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+                    aria-hidden="true">
+                    <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-hampton-blue-1 via-hampton-blue-2 to-hampton-blue-3 opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+                        style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+                    </div>
+                </div> -->
+            </div>
+        </section>
+
+        <!-- Video -->
+        <section>
+
+        </section>
+
+        <!-- Stats -->
+        <section>
+            <div class="py-4">
+                <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                    <div class="mx-auto max-w-2xl lg:max-w-none">
+                        <!-- <div class="text-center">
+                            <h2 class="text-3xl font-bold tracking-tight text-black sm:text-4xl">Trusted by creators
+                                worldwide</h2>
+                            <p class="mt-4 text-lg leading-8 text-gray-600">Lorem ipsum dolor sit amet consect
+                                adipisicing possimus.</p>
+                        </div> -->
+                        <dl class="grid grid-cols-1 gap-0.5 overflow-hidden rounded-md text-center sm:grid-cols-3">
+                            <div class="flex flex-col bg-gray p-8">
+                                <dt class="text-sm font-semibold leading-6 text-gray-600">Websites Launched (& Counting)
+                                </dt>
+                                <dd class="order-first text-3xl font-semibold tracking-tight text-black">23+</dd>
+                            </div>
+                            <div class="flex flex-col bg-gray p-8">
+                                <dt class="text-sm font-semibold leading-6 text-gray-600">Our Websites Helped Sell</dt>
+                                <dd class="order-first text-3xl font-semibold tracking-tight text-black">$200M+</dd>
+                            </div>
+                            <div class="flex flex-col bg-gray p-8">
+                                <dt class="text-sm font-semibold leading-6 text-gray-600">Deadlines Missed</dt>
+                                <dd class="order-first text-3xl font-semibold tracking-tight text-black">0</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies -->
+        <section class="flex flex-col h-auto items-center justify-center gap-y-3 py-32">
+            <div class="flex flex-col gap-y-3 items-center pb-8">
+
+                <h2 class="text-3xl font-semibold tracking-tight text-black sm:text-5xl">Case Studies.</h2>
+                <a href="#" class="text-sm font-semibold leading-6 text-black hover:text-hampton-blue-2">Explore all work <span aria-hidden="true">→</span></a>
+
+
+                <!-- <h2 class="text-4xl">Case Studies</h2> -->
+                <!-- <p><a href="" class="hover:text-hampton-blue-1">Explore all work -></a></p> -->
+            </div>
+            <!-- Case study grid -->
+            <div class="grid grid-cols-1 gap-x-3 w-11/12 max-w-[1000px] h-auto">
+
+                <!-- Live Marama -->
+                <div class="flex flex-col gap-y-6 mt-0 mb-24">
+                    <div class="rounded-xl w-full shadow-lg">
+                        <img src="assets/img/live-marama.jpg" alt="" class="w-full rounded-xl shadow-lg drop-shadow-lg hover:ring-2 hover:ring-hampton-blue-1 cursor-pointer transition-all">
+                    </div>
+                    <div class="flex flex-col gap-x-2 justify-left px-6">
+                        <a href="#" class="text-xl font-medium tracking-tight text-black hover:text-hampton-blue-2 cursor-pointer">Marama <span aria-hidden="true">→</span>
+                        </a>
+                        <!-- <div class="flex flex-row items-center h-5">
+                            <img src="assets/img/marama/marama-logo-sm.svg" alt="" class="h-4">
+                        </div> -->
+                        <p class="font-light italic">Northern Nevada’s most exciting new residential enclave.</p>
+                        <p>Web | Design | Development | Hosting</p>
+                    </div>
+                </div>
+
+                <!-- Sancerra -->
+                <div class="flex flex-col gap-y-6 mt-0 mb-12">
+                    <div class="rounded-xl w-full shadow-lg">
+                        <img src="assets/img/sancerra.jpg" alt="" class="w-full rounded-xl shadow-lg drop-shadow-lg hover:ring-2 hover:ring-hampton-blue-1 cursor-pointer transition-all">
+                    </div>
+                    <div class="flex flex-col gap-x-2 justify-left px-6">
+                        <a href="#" class="text-xl font-medium tracking-tight text-black hover:text-hampton-blue-2 hover cursor-pointer">Sancerra <span aria-hidden="true">→</span>
+                        </a>
+                        <p class="font-light italic">With a track record of more than 175 transactions valued at over $10 billion, Sancerra is leading the industry through the housing shortage.</p>
+                        <p>Web | Design | Development | Hosting</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gradient-to-b from-hampton-blue-1 via-hampton-blue-2 to-hampton-blue-3 bg-opacity-40">
+        <div class="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
+            <nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
+                <div class="pb-6">
+                    <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">About</a>
+                </div>
+                <div class="pb-6">
+                    <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Work</a>
+                </div>
+                <div class="pb-6">
+                    <a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Privacy Policy</a>
+                </div>
+            </nav>
+            <div class="mt-10 flex justify-center space-x-10">
+                <a href="https://github.com/RealHamptonLab/HamptonLabSite" class="text-gray-400 hover:text-gray-500">
+                    <span class="sr-only">GitHub</span>
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+            <p class="mt-10 text-center text-xs leading-5 text-gray-500">&copy; <script>document.write(new Date().getFullYear())</script> Hampton Lab LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
