@@ -19,20 +19,19 @@
 </head>
 
 <body x-data="{ open: false }">
-	<header class="fixed top-0 left-0 right-0 max-h-16 h-16 z-50 overflow-hidden">
+	<header class="fixed top-4 left-0 right-0 max-h-16 h-16 z-50 overflow-hidden">
 		<div class="flex flex-row justify-between items-center h-full max-w-5xl my-0 mx-auto py-2 px-10 rounded-xl bg-hampton-white-1">
 			<div class="flex flex-row h-full max-h-full cursor-pointer">
-				<img src="assets/img/logo.png" alt="Hampton" class="h-full py-1">
-				<img src="assets/img/logo-full-2.png" alt="" class="h-full py-1">
+				<img src="assets/img/logo/logo.png" alt="Hampton" class="h-full py-1">
+				<img src="assets/img/logo/logo-full-2.png" alt="Hampton" class="h-full py-1">
 			</div>
 
-			<!-- TODO: Animate -->
 			<nav class="hidden md:block">
 				<ul class="list-none flex flex-row items-center justify-center h-full gap-x-4 p-0">
-					<li class="font-medium transition-all hover:text-hampton-blue-1"><a href="index.html">Home</a></li>
-					<li class="font-medium transition-all hover:text-hampton-blue-1"><a href="work.html">Work</a></li>
+					<!-- <li class="font-medium transition-all hover:text-hampton-blue-1"><a href="index.html">Home</a></li> -->
+					<!-- <li class="font-medium transition-all hover:text-hampton-blue-1"><a href="work.html">Work</a></li> -->
 					<li class="font-medium transition-all hover:text-hampton-blue-1"><a href="about.html">About</a></li>
-					<li class="font-medium transition-all hover:text-hampton-blue-1"><a href="contact.html">Contact</a>
+					<li class="font-medium transition-all hover:text-hampton-blue-1"><a href="pages/contact.html">Contact</a>
 					</li>
 				</ul>
 			</nav>
@@ -51,13 +50,18 @@
 		<!-- FIXME: Make sure this is always covering the entire screen -->
 		<!-- Mobile menu, show/hide based on menu open state. -->
 		<div class="md:hidden" role="dialog" aria-modal="true" x-show="open">
+
+			<!-- <header class="fixed top-4 left-0 right-0 max-h-16 h-16 z-50 overflow-hidden">
+				<div class="flex flex-row justify-between items-center h-full max-w-5xl my-0 mx-auto py-2 px-10 rounded-xl bg-hampton-white-1"> -->
+
 			<!-- Background backdrop, show/hide based on slide-over state. -->
 			<div class="fixed inset-0 z-50"></div>
-			<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+			<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-200 px-10 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
 				<div class="flex items-center justify-between">
-					<a href="#" class="-m-1.5 p-1.5">
-						<span class="sr-only">Your Company</span>
-						<img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
+					<a href="#" class="h-12 max-h-16">
+						<span class="sr-only">Hampton Lab</span>
+						<!-- <span><img src="assets/img/logo/logo.png" alt=""></span> -->
+						<img class="h-full py-1 w-auto" src="assets/img/logo/logo.png" alt="">
 					</a>
 					<button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" x-on:click="open = ! open">
 						<span class="sr-only">Close menu</span>
@@ -79,7 +83,7 @@
 			</div>
 	</header>
 
-	<main class="max-w-screen-2xl pt-14">
+	<main class="pt-14">
 		<!-- Banner -->
 		<section>
 			<div class="relative isolate px-6 pt-14 lg:px-8">
@@ -101,14 +105,12 @@
 					<div class="text-center">
 						<h1 class="text-4xl font-medium tracking-tight text-black sm:text-6xl">We make and manage
 							websites.</h1>
-						<p class="mt-6 text-lg leading-8 text-gray-600">A web development agency.</p>
+						<p class="mt-6 text-lg leading-8 text-black">A web development agency.</p>
 
 						<!-- CTA -->
 						<div class="mt-10 flex items-center justify-center gap-x-6">
-							<a href="#" class="rounded-md bg-gradient-to-b from-hampton-blue-1 via-hampton-blue-2 to-hampton-blue-3 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:ring-2 hover:ring-hampton-blue-2 transition-all cursor-pointer">I
-								want to work with you</a>
-							<a href="#" class="text-sm font-semibold leading-6 text-black hover:text-hampton-blue-1">Learn more
-								<span aria-hidden="true">→</span></a>
+							<a href="mailto:waseem.mehany@hamptonlab.com" class="rounded-md bg-gradient-to-b from-hampton-blue-1 via-hampton-blue-2 to-hampton-blue-3 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:ring-2 hover:ring-hampton-blue-2 transition-all cursor-pointer">I want to work with you</a>
+							<a href="#" class="text-sm font-semibold leading-6 text-black hover:text-hampton-blue-1">Learn more <span aria-hidden="true">→</span></a>
 						</div>
 					</div>
 				</div>
@@ -123,34 +125,23 @@
 			</div>
 		</section>
 
-		<!-- Video -->
-		<section>
-
-		</section>
-
 		<!-- Stats -->
 		<section>
 			<div class="py-4">
 				<div class="mx-auto max-w-7xl px-6 lg:px-8">
 					<div class="mx-auto max-w-2xl lg:max-w-none">
-						<!-- <div class="text-center">
-                            <h2 class="text-3xl font-bold tracking-tight text-black sm:text-4xl">Trusted by creators
-                                worldwide</h2>
-                            <p class="mt-4 text-lg leading-8 text-gray-600">Lorem ipsum dolor sit amet consect
-                                adipisicing possimus.</p>
-                        </div> -->
 						<dl class="grid grid-cols-1 gap-0.5 overflow-hidden rounded-md text-center sm:grid-cols-3">
 							<div class="flex flex-col bg-gray p-8">
-								<dt class="text-sm font-semibold leading-6 text-gray-600">Websites Launched (& Counting)
+								<dt class="text-sm font-semibold leading-6 text-black">Websites Launched (& Counting)
 								</dt>
 								<dd class="order-first text-3xl font-semibold tracking-tight text-black">23+</dd>
 							</div>
 							<div class="flex flex-col bg-gray p-8">
-								<dt class="text-sm font-semibold leading-6 text-gray-600">Our Websites Helped Sell</dt>
+								<dt class="text-sm font-semibold leading-6 text-black">Our Websites Helped Sell</dt>
 								<dd class="order-first text-3xl font-semibold tracking-tight text-black">$200M+</dd>
 							</div>
 							<div class="flex flex-col bg-gray p-8">
-								<dt class="text-sm font-semibold leading-6 text-gray-600">Deadlines Missed</dt>
+								<dt class="text-sm font-semibold leading-6 text-black">Deadlines Missed</dt>
 								<dd class="order-first text-3xl font-semibold tracking-tight text-black">0</dd>
 							</div>
 						</dl>
@@ -160,65 +151,69 @@
 		</section>
 
 		<!-- Case Studies -->
-		<section class="flex flex-col h-auto items-center justify-center gap-y-3 py-32">
+		<section class="flex flex-col h-auto items-center justify-center gap-y-3 py-32 w-full">
 
 			<!-- Section title -->
 			<div class="flex flex-col gap-y-3 items-center pb-8">
 				<h2 class="text-3xl font-semibold tracking-tight text-black sm:text-5xl">Case Studies.</h2>
-				<a href="#" class="text-sm font-semibold leading-6 text-black hover:text-hampton-blue-2">Explore all work <span aria-hidden="true">→</span></a>
+				<a href="mailto:waseem.mehany@hamptonlab.com" class="text-sm font-semibold leading-6 text-black hover:text-hampton-blue-2">Reach out for full case studies <span aria-hidden="true">→</span></a>
 			</div>
 
 			<!-- Case study grid -->
-			<div class="relative py-2 flex flex-row px-0 mx-0 w-full max-w-7xl">
+			<div class="relative py-2 flex flex-col gap-y-4 px-0 mx-0 w-full max-w-[2000px] bg-gray">
 				<!-- Marama -->
-				<div class="flex items-center justify-center w-full h-auto bg-black">
-					<img src="assets/img/specific-energy.png" alt="" class="z-10">
-				</div>
+				<a href="https://livemarama.com" class="flex items-center justify-center w-full h-auto">
+					<img src="assets/img/marama-living.png" alt="" class="z-10">
+				</a>
 
-				<!-- Marama -->
-				<div class="flex items-center justify-center w-full h-auto bg-black">
-					<img src="assets/img/specific-energy.png" alt="" class="z-10">
+				<!-- Specific Energy -->
+				<a href="https://specificenergy.com" class="flex items-center justify-center w-full h-auto">
+					<img src="assets/img/specific-energy.jpg" alt="" class="z-10">
+				</a>
+
+				<!-- Sancerra -->
+				<a href="https://sancerra.com" class="flex items-center justify-center w-full h-auto">
+					<img src="assets/img/sancerra.jpg" alt="" class="z-10">
+				</a>
+
+				<!-- LA Years -->
+				<a href="https://layears.org" class="flex items-center justify-center w-full h-auto">
+					<img src="assets/img/la-years.jpg" alt="" class="z-10">
+				</a>
+
+				<!-- Cornerstone -->
+				<div class="flex items-center justify-center w-full h-auto">
+					<img src="assets/img/cornerstone.jpg" alt="" class="z-10">
 				</div>
-				
-				<!-- <div class="flex flex-col w-full h-auto items-center z-20">
-					<h3 class="text-4xl font-medium tracking-tight text-black hover:text-hampton-blue-2 cursor-pointer">Marama</h3>
-					<p class="font-light">Northern Nevada’s most exciting new residential enclave.</p>
-					<p>Web | Design | Development | Hosting</p>
-				</div> -->
 			</div>
-			<!-- <div class="relative py-2 flex flex-row px-0 mx-0 w-full max-w-7xl h-auto">
-					<div class="flex flex-col w-full h-auto items-center">
-						<h3 class="text-4xl font-medium tracking-tight text-black hover:text-hampton-blue-2 cursor-pointer">Marama</h3>
-						<p class="font-light">Northern Nevada’s most exciting new residential enclave.</p>
-						<p>Web | Design | Development | Hosting</p>
-					</div>
-					<img src="assets/img/sancerra.png" alt="" class="absolute top-0 left-0 right-0 z-10">
-				</div> -->
 		</section>
 	</main>
 
-	<footer class="bg-gradient-to-b from-hampton-blue-1 via-hampton-blue-2 to-hampton-blue-3 bg-opacity-40">
+	<footer class="bg-gradient-to-b from-white to-gray">
+		<!-- Section title -->
+		<div class="flex flex-col gap-y-3 items-center pb-8">
+			<h2 class="text-4xl font-semibold tracking-tight text-black sm:text-6xl">Let's talk.</h2>
+			<a href="mailto:waseem.mehany@hamptonlab.com" class="text-2xl font-semibold leading-6 text-black hover:text-hampton-blue-2">waseem.mehany@hamptonlab.com <span aria-hidden="true">→</span></a>
+		</div>
+
 		<div class="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
 			<nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
 				<div class="pb-6">
-					<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">About</a>
+					<a href="#" class="text-sm leading-6 text-black hover:text-hampton-blue-2">About</a>
 				</div>
 				<div class="pb-6">
-					<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Work</a>
-				</div>
-				<div class="pb-6">
-					<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900">Privacy Policy</a>
+					<a href="#" class="text-sm leading-6 text-black hover:text-hampton-blue-2">Contact</a>
 				</div>
 			</nav>
 			<div class="mt-10 flex justify-center space-x-10">
-				<a href="https://github.com/RealHamptonLab/HamptonLabSite" class="text-gray-400 hover:text-gray-500">
+				<a href="https://github.com/RealHamptonLab/HamptonLabSite" class="text-black hover:text-hampton-blue-2">
 					<span class="sr-only">GitHub</span>
 					<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
 						<path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
 					</svg>
 				</a>
 			</div>
-			<p class="mt-10 text-center text-xs leading-5 text-gray-500">&copy;
+			<p class="mt-10 text-center text-xs leading-5 text-black">&copy;
 				<script>document.write(new Date().getFullYear())</script> Hampton Lab LLC. All rights reserved.
 			</p>
 		</div>
