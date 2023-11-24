@@ -60,7 +60,6 @@
 				<div class="flex items-center justify-between">
 					<a href="#" class="h-12 max-h-16">
 						<span class="sr-only">Hampton Lab</span>
-						<!-- <span><img src="assets/img/logo/logo.png" alt=""></span> -->
 						<img class="h-full py-1 w-auto" src="assets/img/logo/logo.png" alt="">
 					</a>
 					<button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" x-on:click="open = ! open">
@@ -105,14 +104,10 @@
                     </div>
                 </div> -->
 
-				<!-- <div class="absolute top-0 right-0 left-0 h-full flex items-center justify-center z-0">
-                    <img src="assets/img/safari-browser.png" alt="" class="h-full">
-                </div> -->
-
 				<!-- Banner Text -->
 				<div class="relative mx-auto max-w-2xl py-20 z-10">
 					<div class="text-center">
-						<h1 class="text-4xl font-medium tracking-tight text-black sm:text-6xl">We make and manage
+						<h1 class="text-5xl font-medium tracking-tight text-black sm:text-6xl">We <span class="">make and manage</span>
 							websites.</h1>
 						<p class="mt-6 text-lg leading-8 text-black">A web development agency.</p>
 
@@ -164,30 +159,42 @@
 
 			<!-- Section title -->
 			<div class="flex flex-col gap-y-3 items-center pb-8">
-				<h2 class="text-3xl font-semibold tracking-tight text-black sm:text-5xl">Case Studies.</h2>
+				<h2 class="text-4xl font-semibold tracking-tight text-black sm:text-6xl">Case Studies.</h2>
 				<a href="mailto:waseem.mehany@hamptonlab.com" class="text-sm font-semibold leading-6 text-black hover:text-hampton-blue-2">Reach out for full case studies <span aria-hidden="true">→</span></a>
 			</div>
 
 			<!-- Case study grid -->
-			<div class="relative py-2 flex flex-col gap-y-4 px-0 mx-0 w-full max-w-[2000px] bg-gray">
+			<div class="relative py-2 flex flex-col gap-y-6 px-0 mx-0 w-full max-w-[2000px] bg-gray">
 				<!-- Marama -->
 				<a href="https://livemarama.com" class="flex items-center justify-center w-full h-auto">
-					<img src="assets/img/marama-living.png" alt="" class="z-10">
+					<picture>
+						<source media="(max-width: 600px)" srcset="assets/img/marama-mobile.jpg" />
+						<img src="assets/img/marama.jpg" alt="Marama Living" class="z-10">
+					</picture>
 				</a>
 
 				<!-- Specific Energy -->
 				<a href="https://specificenergy.com" class="flex items-center justify-center w-full h-auto">
-					<img src="assets/img/specific-energy.jpg" alt="" class="z-10">
+					<picture>
+						<source media="(max-width: 600px)" srcset="assets/img/specific-energy-mobile.jpg" />
+						<img src="assets/img/specific-energy.jpg" alt="Sancerra" class="z-10">
+					</picture>
 				</a>
 
 				<!-- Sancerra -->
 				<a href="https://sancerra.com" class="flex items-center justify-center w-full h-auto">
-					<img src="assets/img/sancerra.jpg" alt="" class="z-10">
+					<picture>
+						<source media="(max-width: 600px)" srcset="assets/img/sancerra-mobile.jpg" />
+						<img src="assets/img/sancerra.jpg" alt="Sancerra" class="z-10">
+					</picture>
 				</a>
 
 				<!-- LA Years -->
 				<a href="https://layears.org" class="flex items-center justify-center w-full h-auto">
-					<img src="assets/img/la-years.jpg" alt="" class="z-10">
+					<picture>
+						<source media="(max-width: 600px)" srcset="assets/img/la-years-mobile.jpg" />
+						<img src="assets/img/la-years.jpg" alt="" class="z-10">
+					</picture>
 				</a>
 
 				<!-- Cornerstone -->
@@ -202,7 +209,7 @@
 		<!-- Section title -->
 		<div class="flex flex-col gap-y-3 items-center pb-8">
 			<h2 class="text-4xl font-semibold tracking-tight text-black sm:text-6xl">Let's talk.</h2>
-			<a href="mailto:waseem.mehany@hamptonlab.com" class="text-2xl font-semibold leading-6 text-black hover:text-hampton-blue-2">waseem.mehany@hamptonlab.com <span aria-hidden="true">→</span></a>
+			<a href="mailto:waseem.mehany@hamptonlab.com" class="text-xl sm:text-2xl font-semibold leading-6 text-black hover:text-hampton-blue-2">waseem.mehany@hamptonlab.com <span aria-hidden="true">→</span></a>
 		</div>
 
 		<div class="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
