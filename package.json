@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx tailwindcss -i src/assets/input.css -o ./dist/output.css --watch",
+    "start": "npx tailwindcss -i src/assets/input.css -o src/assets/output.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "npx tailwindcss -i src/assets/input.css -o ./dist/output.css --minify"
+    "deploy": "npx tailwindcss -i src/assets/input.css -o src/assets/output.css --minify"
   },
   "keywords": [],
   "author": "",
