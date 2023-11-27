@@ -16,6 +16,16 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5NQTZSWVBP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-5NQTZSWVBP');
+    </script>
 </head>
 
 <body x-data="{ open: false }">
@@ -30,7 +40,7 @@
                 <ul class="list-none flex flex-row items-center justify-center h-full gap-x-4 p-0">
                     <li class="font-medium transition-all hover:text-hampton-blue-1"><a href="../index.html">Home</a></li>
                     <li class="font-medium transition-all hover:text-hampton-blue-1"><a href="about.html">About</a></li>
-                    <li class="font-medium transition-all hover:text-hampton-blue-1"><a href="contact.html">Contact</a></li>
+                    <li class="font-medium transition-all hover:text-hampton-blue-1"><a href="">Contact</a></li>
                     </li>
                 </ul>
             </nav>
@@ -83,7 +93,7 @@
                 <div class="relative mx-auto max-w-2xl py-20 z-10">
                     <div class="flex flex-col gap-y-2 text-center">
                         <h1 class="text-5xl font-medium tracking-tight text-black sm:text-6xl">Let's talk.</h1>
-			            <a href="mailto:waseem.mehany@hamptonlab.com" class="text-xl sm:text-2xl font-semibold leading-6 text-black hover:text-hampton-blue-2">waseem.mehany@hamptonlab.com <span aria-hidden="true">→</span></a>
+                        <a href="mailto:waseem.mehany@hamptonlab.com" class="text-xl sm:text-2xl font-semibold leading-6 text-black hover:text-hampton-blue-2">waseem.mehany@hamptonlab.com <span aria-hidden="true">→</span></a>
                         <p class="pt-4 font-light italic">We respond to every single email.</p>
                     </div>
                 </div>
