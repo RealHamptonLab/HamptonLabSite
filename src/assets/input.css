@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    html {
+        @apply scroll-smooth;
+    }
+}
+
 :root {
     --nav-height: 50px;
 }
@@ -12,7 +18,7 @@
     font-weight: bold;
     font-style: normal;
 }
-  
+
 @font-face {
     font-family: 'SFProText';
     src: url('fonts/SF-Pro-Text/SF-Pro-Text-Regular.otf') format('otf');
@@ -28,10 +34,12 @@
 .mobile-nav__links {
     display: none;
 }
+
 @media screen and (max-width: 600px) {
     .nav__links {
         display: none;
     }
+
     .mobile-nav__links {
         display: flex;
     }
